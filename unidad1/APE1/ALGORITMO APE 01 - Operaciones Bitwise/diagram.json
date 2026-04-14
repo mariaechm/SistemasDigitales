@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Maria Elizabeth Chuico Medina",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -118.2, "left": 60.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 106.2, "left": -125.4, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -90, "left": 109.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -14.4,
+      "left": 105.05,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "bb1:6t.c", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:5t.c", "", [ "$bb" ] ],
+    [ "uno:13", "bb1:6b.i", "red", [ "v-86.4", "h134.8" ] ],
+    [ "bb1:5t.d", "uno:GND.1", "black", [ "h-9.6", "v48", "h-125.1" ] ],
+    [ "r1:1", "bb1:6t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:6b.h", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}

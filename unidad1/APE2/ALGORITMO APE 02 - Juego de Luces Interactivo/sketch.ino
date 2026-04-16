@@ -16,16 +16,18 @@ void setup() {
   randomSeed(analogRead(0));
 }
 
-void loop() {
+  void loop() {
   leerBoton();
+  ejecutarPatron();
+}
 
+  void ejecutarPatron() {
   switch (patronActual) {
     case 0: patronSecuencia();   break;
     case 1: patronPersecucion(); break;
     case 2: patronParpadeo();    break;
     case 3: patronAleatorio();   break;
-    case 4: patronOnda();        break;
-  }
+    case 4: patronOnda();        break;  }
 }
 
 void leerBoton() {
